@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
+
     public float jumpHeight;
     public float jumpSpeed;
 

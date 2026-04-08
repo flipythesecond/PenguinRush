@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
     private Animator walkAnimation;
 
     public int health;
+    public float jumpHeight;
+
+    private bool jumpBuffer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +23,10 @@ public class PlayerBehaviour : MonoBehaviour
     {
         rb.linearVelocity += new Vector2(Time.deltaTime, 0.0f);
         walkAnimation.speed = rb.linearVelocityX;
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            jumpBuffer = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,6 +35,15 @@ public class PlayerBehaviour : MonoBehaviour
         {
             health--;
             Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (jumpBuffer)
+        {
+            rb.linearVelocityY = jumpHeight;
+            jumpBuffer = false;
         }
     }
 }
