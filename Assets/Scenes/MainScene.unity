@@ -645,6 +645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalrusEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 54543144806969855, guid: 5f445a35e8aec9344b538fb879916bf1, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6042261755269997054, guid: 5f445a35e8aec9344b538fb879916bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.187
