@@ -35,7 +35,6 @@ public class PlayerBehaviour : MonoBehaviour
         {
             health--;
             Destroy(collision.gameObject);
-            rb.linearVelocityX /= 2;
         }
     }
 
