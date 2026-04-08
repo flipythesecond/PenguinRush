@@ -26,7 +26,7 @@ public class PlatformBehaviour : MonoBehaviour
         {
             GameObject oldChunk = activeChunks[0];
             activeChunks.RemoveAt(0);
-            DestroyOldChunk();
+            Destroy(oldChunk);
         }
         
     }
