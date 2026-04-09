@@ -34,11 +34,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpBuffer = true;
         }
-        if (Keyboard.current.space.wasPressedThisFrame)
-        {
-            jumpBuffer = true;
-        }
-
+        
     }
     void FixedUpdate()
     {
