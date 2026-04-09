@@ -212,7 +212,7 @@ MonoBehaviour:
   snowball: {fileID: 7486502513057452713, guid: 5ce0fc4b2fa36414b876c30a82428eeb, type: 3}
   throwTimeMin: 1
   throwTimeMax: 2
-  throwSpeedMinX: -25
-  throwSpeedMaxX: -10
+  throwSpeedMinX: -15
+  throwSpeedMaxX: 10
   throwSpeedMinY: 0
   throwSpeedMaxY: 15

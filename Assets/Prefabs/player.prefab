@@ -190,8 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290bf0f87c6c4944da9a3685403cbfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBehaviour
-  health: 3
-  jumpHeight: 5
+  health: 5
+  jumpHeight: 5.5
   damageSound: {fileID: 8300000, guid: 10ec36f9538fa41fe9b4eb2de07c7dfe, type: 3}
   healthSound: {fileID: 8300000, guid: b95b2d9469fa549a7991c99403d1f20e, type: 3}
   cameraOffsetX: 2.5

@@ -212,5 +212,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
   jumpMinX: -1
   jumpMaxX: 1
-  jumpMinY: 3
-  jumpMaxY: 7
+  jumpMinY: 5
+  jumpMaxY: 8
