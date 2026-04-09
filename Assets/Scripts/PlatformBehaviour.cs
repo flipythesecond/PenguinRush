@@ -32,7 +32,7 @@ public class PlatformBehaviour : MonoBehaviour
             lastPointWorldPos = spriteController.transform.TransformPoint(lastPointLocalPos);
         }
 
-        if (Vector3.Distance(player.position, lastPointWorldPos) < spawnThreshold)
+        if (Vector3.Distance(player.position, lastPointLocalPos) < spawnThreshold)
         {
             SpawnNewChunk();
         }
@@ -48,7 +48,7 @@ public class PlatformBehaviour : MonoBehaviour
 
     void SpawnNewChunk()
     {
-        GameObject newChunk = Instantiate(ssPrefab, lastPointWorldPos, Quaternion.identity);
+        GameObject newChunk = Instantiate(ssPrefab, lastPointLocalPos, Quaternion.identity);
         SpriteShapeController controller = newChunk.GetComponent<SpriteShapeController>();
 
         controller = spriteController.GetComponent<SpriteShapeController>();
