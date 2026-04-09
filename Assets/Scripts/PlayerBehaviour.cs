@@ -27,6 +27,11 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpBuffer = true;
         }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            jumpBuffer = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,6 +39,15 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             health--;
+            Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionFish(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Fish"))
+        {
+            health++;
             Destroy(collision.gameObject);
         }
     }
