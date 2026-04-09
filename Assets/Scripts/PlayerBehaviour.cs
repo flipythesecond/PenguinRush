@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Video;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -76,6 +77,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             rb.linearVelocity += new Vector2(Time.fixedDeltaTime, 0.0f);
             walkAnimation.speed = rb.linearVelocityX;
+            Camera.main.GetComponent<VideoPlayer>().playbackSpeed = rb.linearVelocityX;
         }
     }
 }
