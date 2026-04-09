@@ -49,6 +49,11 @@ public class PlayerBehaviour : MonoBehaviour
             health--;
             audioSource.PlayOneShot(damageSound);
             Destroy(collision.gameObject);
+            if (health == 0)
+            {
+                walkAnimation.speed = 0;
+                Destroy(this);
+            }
         }
 
         if (collision.gameObject.CompareTag("Fish"))
