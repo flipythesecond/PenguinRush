@@ -736,8 +736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlatformBehaviour
   ssPrefab: {fileID: 1850676325599855323, guid: 26f408104281d5c44a872e3d55e8d34e, type: 3}
   player: {fileID: 1657314740}
-  spawnThreshold: 4
-  destroyThreshold: 50
+  spawnThreshold: 5
+  destroyThreshold: 10
   spriteController: {fileID: 1670463727}
 --- !u!114 &1670463727 stripped
 MonoBehaviour:
@@ -912,11 +912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5300185115885847234, guid: 81f1e9fa9f92c0a4088c64030e89d078, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.3
+      value: 25.1
       objectReference: {fileID: 0}
     - target: {fileID: 5300185115885847234, guid: 81f1e9fa9f92c0a4088c64030e89d078, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.3
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 5300185115885847234, guid: 81f1e9fa9f92c0a4088c64030e89d078, type: 3}
       propertyPath: m_LocalPosition.z
@@ -965,11 +965,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3641064540758637749, guid: 7cd4df892252e4449b8789f46d2e1c2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.26793146
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3641064540758637749, guid: 7cd4df892252e4449b8789f46d2e1c2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.175815
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3641064540758637749, guid: 7cd4df892252e4449b8789f46d2e1c2a, type: 3}
       propertyPath: m_LocalPosition.z

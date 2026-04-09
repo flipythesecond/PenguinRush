@@ -9,12 +9,30 @@ public class PlatformBehaviour : MonoBehaviour
     public float destroyThreshold = 10f;
     public SpriteShapeController spriteController;
 
-    private Vector3 lastEndPosition = Vector3.zero;
+    private Vector3 lastEndPosition;
+    private Vector3 lastPointLocalPos;
+    private Vector3 lastPointWorldPos;
+    int pointCount;
+
     private System.Collections.Generic.List<GameObject> activeChunks = new System.Collections.Generic.List<GameObject>();
+
+    void Start()
+    {
+        
+    }
     void Update()
     {
-       
-        if (Vector3.Distance(player.position, lastEndPosition) < spawnThreshold)
+
+        if (spriteController != null)
+        {
+            pointCount = spriteController.spline.GetPointCount();
+
+            lastPointLocalPos = spriteController.spline.GetPosition(pointCount - 1);
+
+            lastPointWorldPos = spriteController.transform.TransformPoint(lastPointLocalPos);
+        }
+
+        if (Vector3.Distance(player.position, lastPointWorldPos) < spawnThreshold)
         {
             SpawnNewChunk();
         }
@@ -30,7 +48,7 @@ public class PlatformBehaviour : MonoBehaviour
 
     void SpawnNewChunk()
     {
-        GameObject newChunk = Instantiate(ssPrefab, lastEndPosition, Quaternion.identity);
+        GameObject newChunk = Instantiate(ssPrefab, lastPointWorldPos, Quaternion.identity);
         SpriteShapeController controller = newChunk.GetComponent<SpriteShapeController>();
 
         controller = spriteController.GetComponent<SpriteShapeController>();
@@ -39,7 +57,7 @@ public class PlatformBehaviour : MonoBehaviour
         //Spline spline = spriteController.spline;
         //spline.Clear();
 
-        lastEndPosition += new Vector3(10f, 0, 0); // Assuming each chunk is 10 units wide
+        lastEndPosition += new Vector3(40f, 0, 0); // Assuming each chunk is 10 units wide
         activeChunks.Add(newChunk);
     }
 
