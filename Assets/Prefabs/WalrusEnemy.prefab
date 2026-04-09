@@ -210,5 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dcadce900d30c4ba876cb5fd56fca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBehaviour
-  jumpHeight: 5
-  jumpSpeed: -1
+  jumpMinX: -1
+  jumpMaxX: 1
+  jumpMinY: 3
+  jumpMaxY: 7

@@ -4,8 +4,10 @@ public class EnemyBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
 
-    public float jumpHeight;
-    public float jumpSpeed;
+    public float jumpMinX;
+    public float jumpMaxX;
+    public float jumpMinY;
+    public float jumpMaxY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +25,8 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Terrain"))
         {
-            rb.linearVelocity = new Vector2(jumpSpeed, jumpHeight);
+            GetComponent<Animator>().Play("EmptyState");
+            rb.linearVelocity = new Vector2(Random.Range(jumpMinX, jumpMaxX), Random.Range(jumpMinY, jumpMaxY));
         }
     }
 }

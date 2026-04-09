@@ -11,10 +11,6 @@ public class PlatformBehaviour : MonoBehaviour
 
     private Vector3 lastEndPosition = Vector3.zero;
     private System.Collections.Generic.List<GameObject> activeChunks = new System.Collections.Generic.List<GameObject>();
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-    // Update is called once per frame
     void Update()
     {
        
@@ -37,7 +33,9 @@ public class PlatformBehaviour : MonoBehaviour
         GameObject newChunk = Instantiate(ssPrefab, lastEndPosition, Quaternion.identity);
         SpriteShapeController controller = newChunk.GetComponent<SpriteShapeController>();
 
-        ModifySpline(controller.spline);
+        controller = spriteController.GetComponent<SpriteShapeController>();
+
+        //ModifySpline(controller.spline);
         //Spline spline = spriteController.spline;
         //spline.Clear();
 
