@@ -194,6 +194,8 @@ MonoBehaviour:
   jumpHeight: 5
   damageSound: {fileID: 8300000, guid: 10ec36f9538fa41fe9b4eb2de07c7dfe, type: 3}
   healthSound: {fileID: 8300000, guid: b95b2d9469fa549a7991c99403d1f20e, type: 3}
+  cameraOffsetX: 2.5
+  cameraOffsetY: 1
 --- !u!95 &1588186795242292280
 Animator:
   serializedVersion: 7
