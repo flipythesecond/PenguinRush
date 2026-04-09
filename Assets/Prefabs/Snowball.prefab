@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4471834286349874789}
   - component: {fileID: 3221695749395873839}
   - component: {fileID: 4198517594071175282}
+  - component: {fileID: -5959034422143284479}
   m_Layer: 0
   m_Name: Snowball
   m_TagString: Enemy
@@ -156,3 +157,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-5959034422143284479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486502513057452713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6a0a14b11b22a4690516aec117f075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnowballBehaviour
+  despawnTime: 3
