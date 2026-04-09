@@ -7,6 +7,10 @@ public class MenuBehavior : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainGame");
     }
 
+    public void gotoMenu(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
