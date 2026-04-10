@@ -14,7 +14,7 @@ public class VideoSetFix : MonoBehaviour
         videoPlayer.url = videoPath;
 
         videoPlayer.isLooping = true;
-        videoPlayer.playOnAwake = false;
+        videoPlayer.playOnAwake = true;
 
         videoPlayer.SetDirectAudioMute(0, true);
 
