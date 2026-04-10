@@ -30,18 +30,15 @@ public class GameOver : MonoBehaviour
     {
         isGameOver = true;
         GameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene");
     }
 
     public void GoHome()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }
