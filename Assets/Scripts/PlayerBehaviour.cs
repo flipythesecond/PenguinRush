@@ -20,12 +20,16 @@ public class PlayerBehaviour : MonoBehaviour
     public float cameraOffsetY;
     private Vector2 cameraVelocity;
 
+    public HeartUI heartUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         walkAnimation = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        heartUI.UpdateHearts(health);
     }
 
     // Update is called once per frame
@@ -50,6 +54,9 @@ public class PlayerBehaviour : MonoBehaviour
             health--;
             audioSource.PlayOneShot(damageSound);
             Destroy(collision.gameObject);
+
+            heartUI.UpdateHearts(health);
+
             if (health == 0)
             {
                 walkAnimation.speed = 0;
@@ -62,6 +69,8 @@ public class PlayerBehaviour : MonoBehaviour
             health++;
             audioSource.PlayOneShot(healthSound);
             Destroy(collision.gameObject);
+
+            heartUI.UpdateHearts(health);
         }
     }
 
