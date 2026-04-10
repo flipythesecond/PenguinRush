@@ -4,7 +4,7 @@ public class MenuBehavior : MonoBehaviour
 {
 
     public void gotoGame(){
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainGame");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
     }
 
     public void gotoMenu(){

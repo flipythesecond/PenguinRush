@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -39,7 +40,9 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpBuffer = true;
         }
+
         
+
     }
     void FixedUpdate()
     {
@@ -59,6 +62,7 @@ public class PlayerBehaviour : MonoBehaviour
 
             if (health == 0)
             {
+                
                 walkAnimation.speed = 0;
                 Destroy(this);
             }
@@ -89,4 +93,7 @@ public class PlayerBehaviour : MonoBehaviour
             Camera.main.GetComponent<VideoPlayer>().playbackSpeed = rb.linearVelocityX;
         }
     }
+
+  
+  
 }
